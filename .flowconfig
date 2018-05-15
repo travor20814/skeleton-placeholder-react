@@ -1,0 +1,9 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/radium/src
+
+[include]
+
+[libs]
+decls/
+
+[options]

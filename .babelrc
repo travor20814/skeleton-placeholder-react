@@ -1,0 +1,18 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "browsers": ["last 2 versions"],
+      },
+    }],
+    ["@babel/preset-stage-2", {
+      "decoratorsLegacy": true
+    }],
+    "@babel/preset-react",
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-flow-strip-types",
+    "react-hot-loader/babel",
+  ],
+}
