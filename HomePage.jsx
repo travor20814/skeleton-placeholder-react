@@ -36,12 +36,12 @@ const shimAnimation = keyframes({
 });
 
 const ANIMATION_BACKGROUND_BUNDLE = {
+  background: 'linear-gradient(to right, #eeeeee 0%, #dddddd 10%, #eeeeee 25%)',
+  animationName: shimAnimation,
   animationDuration: '1s',
   animationFillMode: 'forwards',
   animationIterationCount: 'infinite',
-  animationName: shimAnimation,
   animationTimingFunction: 'linear',
-  background: 'linear-gradient(to right, #eeeeee 0%, #dddddd 10%, #eeeeee 25%)',
 };
 
 function HomePage() {
