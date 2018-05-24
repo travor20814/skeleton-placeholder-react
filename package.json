@@ -1,6 +1,6 @@
 {
   "name": "skeleton-placeholder-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Skeleton Placeholder",
   "main": "dist/bundle.js",
   "private": false,
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js",
-    "example": "webpack-dev-server --host 0.0.0.0 --config ./examples/webpack.config.js",
+    "build": "webpack -p",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "keywords": [
