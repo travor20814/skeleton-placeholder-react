@@ -5,11 +5,19 @@ module.exports = {
   entry: [
     './src/index.js',
   ],
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: '_',
+    },
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'skeleton-placeholder-react',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [{
