@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import { Route } from 'react-router';
 
-import HomePage from './HomePage.jsx';
+import HomePage from './src/index.js';
 
 const styles = {
   wrapper: {
@@ -25,7 +25,7 @@ function App() {
   return (
     <StyleRoot style={styles.wrapper}>
       <Router>
-        <Route path="/" component={HomePage} />
+        <Route path="/" component={() => <HomePage type="listArticleWithPhoto" />} />
       </Router>
     </StyleRoot>
   );
