@@ -1,28 +1,32 @@
 {
   "name": "skeleton-placeholder-react",
-  "version": "1.0.0",
-  "description": "skeleton placeholder for personal practice",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Skeleton Placeholder",
+  "main": "dist/bundle.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travor20814/skeleton-placeholder-react.git"
+  },
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.config.js",
+    "example": "webpack-dev-server --host 0.0.0.0 --config ./examples/webpack.config.js",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
   },
   "keywords": [
+    "javascript",
     "react",
     "skeleton",
     "placeholder"
   ],
   "author": "Travor Lee",
-  "license": "ISC",
-  "dependencies": {
-    "debug": "^3.1.0",
-    "radium": "^0.24.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-hot-loader": "^4.1.1",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2"
+  "license": "MIT",
+  "peerDependencies": {
+    "radium": "*",
+    "react": "*",
+    "react-dom": "*"
   },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.32",
     "@babel/core": "^7.0.0-beta.32",
@@ -34,6 +38,13 @@
     "@babel/runtime": "^7.0.0-beta.32",
     "babel-eslint": "^8.0.2",
     "babel-loader": "^8.0.0-beta.0",
+    "debug": "^3.1.0",
+    "radium": "^0.24.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-hot-loader": "^4.1.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "eslint": "^4.12.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-flowtype": "^2.39.1",
