@@ -11,6 +11,8 @@ const shimAnimation = keyframes({
   },
 });
 
+export const MAIN_BOARD_BACKGROUND_COLOR = '#fff';
+
 export default {
   backgroundColor: '#eeeeee',
   backgroundImage: 'linear-gradient(to right, #eeeeee 0%, #dddddd 50%, #eeeeee 100%)',

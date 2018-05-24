@@ -2,8 +2,7 @@
 import React from 'react';
 import radium from 'radium';
 
-import Theme from '../setting.js';
-import animationBundle from '../config.js';
+import animationBundle, { MAIN_BOARD_BACKGROUND_COLOR } from '../config.js';
 
 const styles = {
   animatedBackground: {
@@ -190,7 +189,7 @@ function ListArticleWithPhoto({
 
 ListArticleWithPhoto.defaultProps = {
   height: 120,
-  backgroundColor: Theme.MAIN_BOARD_BACKGROUND_COLOR,
+  backgroundColor: MAIN_BOARD_BACKGROUND_COLOR,
 };
 
 export default radium(ListArticleWithPhoto);
