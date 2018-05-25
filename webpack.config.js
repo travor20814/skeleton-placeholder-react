@@ -11,18 +11,22 @@ const developmentPlugins = [
 
 const productionPlugins = [];
 
+const productionEntries = [
+  './src/index.js',
+];
+
 const developmentEntries = [
   'react-hot-loader/patch',
   'webpack-dev-server/client?http://localhost:1222',
   'webpack/hot/only-dev-server',
+  path.resolve(__dirname, 'example/entry.jsx'),
 ];
 
 module.exports = {
   devtool: NODE_ENV !== 'production' ? 'source-map' : false,
   mode: NODE_ENV === 'production' ? NODE_ENV : 'development',
   entry: [
-    ...(NODE_ENV !== 'production' ? developmentEntries : []),
-    './src/index.js',
+    ...(NODE_ENV !== 'production' ? developmentEntries : productionEntries),
   ],
   externals: {
     react: {
