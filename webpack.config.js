@@ -19,7 +19,7 @@ const developmentEntries = [
   'react-hot-loader/patch',
   'webpack-dev-server/client?http://localhost:1222',
   'webpack/hot/only-dev-server',
-  path.resolve(__dirname, 'example/entry.jsx'),
+  path.resolve(__dirname, 'examples/entry.jsx'),
 ];
 
 module.exports = {
