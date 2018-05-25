@@ -22,7 +22,7 @@ function App() {
   return (
     <StyleRoot style={styles.wrapper}>
       <Router>
-        <Route path="/" component={() => <HomePage type="listArticleWithPhoto" />} />
+        <Route path="/" component={HomePage} />
       </Router>
     </StyleRoot>
   );
