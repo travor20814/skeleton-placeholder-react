@@ -7,7 +7,6 @@ import animationBundle, { MAIN_BOARD_BACKGROUND_COLOR } from '../config.js';
 const styles = {
   animatedBackground: {
     width: '100%',
-    height: 180,
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
