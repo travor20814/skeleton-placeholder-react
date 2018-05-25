@@ -1,5 +1,5 @@
 // @flow
-
+/* eslint import/no-extraneous-dependencies: 0 */
 import React from 'react';
 import { StyleRoot } from 'radium';
 import { BrowserRouter as Router } from 'react-router-dom';

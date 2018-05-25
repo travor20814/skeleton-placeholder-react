@@ -22,27 +22,34 @@ const developmentEntries = [
   path.resolve(__dirname, 'examples/entry.jsx'),
 ];
 
+const productionOutput = {
+  filename: 'bundle.js',
+  path: path.resolve(__dirname, 'dist'),
+  library: 'skeleton-placeholder-react',
+  libraryTarget: 'commonjs2',
+};
+
+const developmentOutput = {
+  filename: 'bundle.js',
+  path: path.resolve(__dirname, 'dist'),
+  publicPath: '/',
+};
+
 module.exports = {
   devtool: NODE_ENV !== 'production' ? 'source-map' : false,
   mode: NODE_ENV === 'production' ? NODE_ENV : 'development',
   entry: [
     ...(NODE_ENV !== 'production' ? developmentEntries : productionEntries),
   ],
-  externals: {
+  externals: NODE_ENV === 'production' ? {
     react: {
       commonjs: 'react',
       commonjs2: 'react',
       amd: 'react',
       root: '_',
     },
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-    library: 'skeleton-placeholder-react',
-    libraryTarget: 'commonjs2',
-  },
+  } : {},
+  output: NODE_ENV === 'production' ? productionOutput : developmentOutput,
   plugins: [
     ...(NODE_ENV !== 'production' ? developmentPlugins : productionPlugins),
     new webpack.NoEmitOnErrorsPlugin(),
