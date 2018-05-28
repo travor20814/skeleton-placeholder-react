@@ -4,6 +4,8 @@ import IntroShimmer from '../components/IntroShimmer.jsx'; // basic
 import ListArticleWithPhoto from '../components/ListArticleWithPhoto.jsx'; // listArticleWithPhoto
 import AvatarShimmer from '../components/AvatarShimmer.jsx'; // avatar
 
+const SIDE_LENGTH = 50;
+
 const styles = {
   wrapper: {
     width: '100%',
@@ -21,8 +23,8 @@ const styles = {
     borderBottom: '1px dashed rgba(130, 130, 130, 0.35)',
   },
   avatarWrapper: {
-    width: 100,
-    height: 100,
+    width: SIDE_LENGTH,
+    height: SIDE_LENGTH,
   },
 };
 
@@ -42,7 +44,9 @@ export default function HomePage() {
       </div>
       <div style={styles.componentWrapper}>
         <div style={styles.avatarWrapper}>
-          <AvatarShimmer backgroundColor="#fff" />
+          <AvatarShimmer
+            side={SIDE_LENGTH}
+            backgroundColor="#fff" />
         </div>
       </div>
     </div>

@@ -10,23 +10,22 @@ const styles = {
     height: '100%',
     backgroundColor: 'transparent',
     position: 'relative',
+    overflow: 'hidden',
   },
   avatarBlockMask: {
     position: 'absolute',
-    left: -20,
-    top: -20,
-    width: 'calc(100% + 40px)',
-    height: 'calc(100% + 40px)',
     borderRadius: '50%',
     backgroundColor: 'transparent',
   },
 };
 
 type Props = {
+  side?: Number,
   backgroundColor?: String,
 };
 
 function AvatarShimmer({
+  side,
   backgroundColor,
 }: Props) {
   return (
@@ -35,7 +34,11 @@ function AvatarShimmer({
         style={[
           styles.avatarBlockMask,
           {
-            border: `20px solid ${backgroundColor}`,
+            width: `calc(100% + ${side / 2.4375}px)`,
+            height: `calc(100% + ${side / 2.4375}px)`,
+            left: `-${(side / 2.4375) / 2}px`,
+            top: `-${(side / 2.4375) / 2}px`,
+            border: `${(side / 2.4375) / 2}px solid ${backgroundColor}`,
           },
         ]} />
     </div>
@@ -43,6 +46,7 @@ function AvatarShimmer({
 }
 
 AvatarShimmer.defaultProps = {
+  side: 120,
   backgroundColor: MAIN_BOARD_BACKGROUND_COLOR,
 };
 
