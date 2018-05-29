@@ -5,3 +5,5 @@ webpack.config.js
 config.js
 static
 examples
+.storybook
+stories
