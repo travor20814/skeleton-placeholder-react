@@ -13,7 +13,7 @@ const styles = {
   },
   blockMask: {
     width: '100%',
-    flex: 0.5,
+    flex: 0.1,
   },
   mainRow: {
     flex: 1,
